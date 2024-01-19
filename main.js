@@ -15,4 +15,4 @@ let res = await fetch("https://api.spotify.com/v1/me/player", {
   // "mode": "cors"
 });
 
-console.log(await res.json());
+console.log((await res.json()).item.album.images);
