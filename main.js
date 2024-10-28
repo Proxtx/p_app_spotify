@@ -69,7 +69,7 @@ export class App {
       return await this.checkForNewSong();
     }
 
-    if (this.currentlyPlaying) return;
+    if (this.currentlyPlaying && !this.config.includeAll) return;
     this.currentlyPlaying = true;
 
     let songName = res.item.name;
